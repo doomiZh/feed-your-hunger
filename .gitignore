@@ -1,0 +1,51 @@
+# Global
+.env
+.env.*
+!.env.example
+
+# Locales
+uploads/
+backups/
+*.dump
+*.bak
+CONTRIBUTING.md
+
+# Backend
+target/
+build/
+.gradle/
+*.class
+*.jar
+*.war
+!.mvn/wrapper/maven-wrapper.jar
+!gradle/wrapper/gradle-wrapper.jar
+HELP.md
+hs_err_pid*
+
+# Frontend
+node_modules/
+dist/
+coverage/
+.vite/
+*.local
+npm-debug.log*
+
+# Logs
+*.log
+*.tmp
+*.swp
+
+# IDE
+.idea/
+*.iml
+.classpath
+.project
+.settings/
+.factorypath
+.vscode/*
+!.vscode/extensions.json
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+desktop.ini
