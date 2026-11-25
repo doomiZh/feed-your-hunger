@@ -8,6 +8,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import java.time.Instant;
 
 @Entity
 @Table(name = "usuario")
@@ -27,6 +28,12 @@ public class UserAccount {
     @Column(name = "rol", nullable = false)
     private Role role;
 
+    @Column(name = "intentos_fallidos", nullable = false)
+    private short failedAttempts;
+
+    @Column(name = "tiempo_bloqueo")
+    private Instant lockedUntil;
+
     protected UserAccount() {
     }
 
@@ -44,5 +51,13 @@ public class UserAccount {
 
     public Role getRole() {
         return role;
+    }
+
+    public short getFailedAttempts() {
+        return failedAttempts;
+    }
+
+    public Instant getLockedUntil() {
+        return lockedUntil;
     }
 }
